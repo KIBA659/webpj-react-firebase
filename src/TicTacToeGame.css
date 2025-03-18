@@ -1,0 +1,111 @@
+.tic-tac-toe-game {
+    background: ghostwhite;
+    background-color: ghostwhite;
+    color: dimgray;
+    font-family: serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .tic-tac-toe-game-stats{
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+  }
+  .tic-tac-toe-game h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    margin-top: 20px;
+  }
+  .tic-tac-toe-game .current-player {
+    font-size: 1.2rem; /* Збільшуємо розмір шрифта для повідомлення */
+    margin: 5px 0; /* Додаємо відступи */
+  }
+  .tic-tac-toe-game .game-container {
+    margin: 5% auto;
+    text-align: center;
+  }
+  
+  .tic-tac-toe-game .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Використовуємо відносні одиниці для адаптивності */
+    grid-template-rows: repeat(3, 1fr); /* Теж адаптивно */
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 550px; /* Обмежуємо максимальну ширину для ПК */
+    max-height: 550px; /* Обмежуємо максимальну висоту для ПК */
+    aspect-ratio: 1; /* Зберігаємо пропорції гри */
+    width: 80vw; /* 90% ширини екрану */
+    height: auto;
+  }
+  
+  .tic-tac-toe-game .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    font-size: 5vw; /* Використовуємо відносний розмір для тексту */
+    cursor: pointer;
+    background-color: #f0f0f0;
+  }
+  
+  .tic-tac-toe-game .activeBox {
+    background: silver;
+  }
+  .tic-tac-toe-game .game-over {
+    position: fixed; /* Фіксоване позиціонування */
+    top: 50%; /* Центруємо по вертикалі */
+    left: 50%; /* Центруємо по горизонталі */
+    transform: translate(-50%, -50%); /* Точно вирівнюємо по центру */
+    background: ghostwhite;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 75px 2px dimgray;
+    z-index: 10; /* Робимо повідомлення видимим поверх інших елементів */
+  }
+  
+  
+  .tic-tac-toe-game button {
+    background: dimgray;
+    border-radius: 2px;
+    color: ghostwhite;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .tic-tac-toe-game button:focus {
+    background: silver;
+  }
+  
+  .tic-tac-toe-game button:hover {
+    background: lightgray;
+  }
+  
+  /* Адаптивність для мобільних пристроїв */
+  @media (max-width: 600px) {
+    .tic-tac-toe-game .board {
+      max-width: 100vw; /* Збільшуємо до 100% ширини екрану */
+      max-height: 100vw; /* Висота за пропорцією */
+    }
+  
+    .tic-tac-toe-game .cell {
+      font-size: 10vw; /* Збільшуємо розмір шрифта для малих екранів */
+    }
+  
+    .tic-tac-toe-game h1 {
+      font-size: 1.5rem;
+    }
+  
+    .tic-tac-toe-game button {
+      padding: 15px 30px; /* Збільшуємо кнопки для зручності на мобільних пристроях */
+      font-size: 1.2rem;
+    }
+  }
+  

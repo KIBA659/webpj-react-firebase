@@ -1,0 +1,109 @@
+/* Login.css */
+
+/* Основні стилі для контейнера */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: ghostwhite;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Максимальна ширина контейнера */
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Стилі для інпутів */
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Кнопки */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Текст для переходу між реєстрацією та входом */
+p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #007bff;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Медіа-запити для адаптації під мобільні пристрої */
+@media (max-width: 600px) {
+  .login-box {
+      padding: 20px; /* Зменшення відступів на малих екранах */
+  }
+
+  h2 {
+      font-size: 20px; /* Зменшення розміру шрифту заголовка */
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button {
+      font-size: 14px; /* Зменшення шрифту для інпутів і кнопок */
+  }
+}
+
+@media (max-width: 400px) {
+  .login-box {
+      width: 90%; /* Ширина контейнера для дуже маленьких екранів */
+  }
+
+  h2 {
+      font-size: 18px; /* Зменшення заголовка для дуже маленьких екранів */
+  }
+
+  input[type="email"],
+  input[type="password"],
+  button {
+      font-size: 12px; /* Ще менший шрифт для інпутів і кнопок */
+      padding: 8px; /* Зменшення відступів на малих екранах */
+  }
+}
